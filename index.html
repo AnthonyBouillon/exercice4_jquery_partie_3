@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="exercice4.css"/>
+  <script src="jquery-3.2.1.js"></script>
+  <meta charset="utf-8"/>
+  <title>exercice 4</title>
+</head>
+<body>
+  <button type="button" id="height">hauteur +</button>
+  <button type="button" id="green">vert</button>
+  <button type="button" id="reset-color">couleur de base</button>
+  <button type="button" id="hide">hide</button>
+  <button type="button" id="show">show</button><br/><br/>
+  <div id="figure"></div>
+  <script>
+  //En récupérant l'id et en cliquant sur le bouton faire
+   $('#height').click(function() {
+     // si la figure est inférieur à 1000px
+      if ($('#figure').height() <= 1000) {
+    // Ajouter + 10 px de hauteur
+      $('#figure').css('height', '+=10px');
+    } else {
+      $('#figure').css('height', '10px');
+    }
+  });
+  // si tu clique sur le boutonn green changer de couleur la figure
+  $('#green').click(function() {
+    $('#figure').css('background-color', 'green');
+  });
+  $('#reset-color').click(function() {
+    $('#figure').css('background-color', 'orange');
+  });
+  $('#hide').click(function() {
+    $('#figure').hide();
+  });
+  $('#show').click(function() {
+    $('#figure').show();
+  });
+  </script>
+  <style>
+    #figure{
+      width: 100%;
+      height: 20px;
+      background-color: orange;
+    }
+  </style>
+</body>
+</html>
